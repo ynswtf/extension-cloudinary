@@ -1,0 +1,21 @@
+{
+    "name": "senemco/cloudinary",
+    "title": "Cloudinary",
+    "version": "1.0.0",
+    "description": "",
+    "type": "pagekit-extension",
+    "license": "MIT",
+    "require": {
+        "cloudinary/cloudinary_php": "dev-master"
+    },
+    "authors": [{
+        "name": "Senem CO",
+        "homepage": "https://senem.co",
+        "email": "me@senem.co"
+    }],
+    "extra": {
+        "scripts": "scripts.php",
+        "icon": "icon.svg",
+        "image": "image.webp"
+    }
+}

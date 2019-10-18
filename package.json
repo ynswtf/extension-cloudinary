@@ -1,0 +1,28 @@
+{
+    "name": "cloudinary",
+    "scripts": {
+        "webpack": "webpack --watch --mode=production",
+        "compile": "gulp"
+    },
+    "devDependencies": {
+        "babel-core": "^6.1.2",
+        "babel-loader": "^6.1.0",
+        "babel-plugin-transform-runtime": "^6.1.2",
+        "babel-preset-es2015": "^6.1.2",
+        "babel-runtime": "^5.8.0",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^3.0.1",
+        "gulp-less": "^4.0.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-replace": "^1.0.0",
+        "vue-html-loader": "^1.0.0",
+        "vue-loader": "^8.2.0",
+        "vue-template-compiler": "^2.5.16",
+        "webpack": "^1.15.0",
+        "webpack-cli": "^2.1.4"
+    },
+    "dependencies": {
+        "cloudinary-core": "^2.7.4"
+    }
+}
