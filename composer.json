@@ -1,12 +1,13 @@
 {
     "name": "senemco/cloudinary",
     "title": "Cloudinary",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "type": "pagekit-extension",
     "license": "MIT",
     "require": {
-        "cloudinary/cloudinary_php": "^1.15.0"
+        "cloudinary/cloudinary_php": "^1.15.0",
+        "mobiledetect/mobiledetectlib": "^2.8"
     },
     "authors": [{
         "name": "Senem CO",
