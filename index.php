@@ -35,6 +35,7 @@ return [
             $scripts->register('cloudinary-editor', 'cloudinary:app/bundle/cloudinary-editor.js', ['~editor']);
             $scripts->register('news-cloudinary' , 'cloudinary:app/bundle/news-cloudinary.js' , ['~news-posts-edit']);
             $scripts->register('cloudinary-config' , sprintf('var $cloudinary = {config:%s};', json_encode($module->config)) , ['~extensions', 'input-tree' , '~editor'] , 'string');
+            $scripts->register('news-widgets-image', 'cloudinary:app/bundle/news-widgets-image.js', ['~widgets']);
         } , 10]
     ],
 ];

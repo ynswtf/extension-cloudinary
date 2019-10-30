@@ -49,7 +49,7 @@
 	__vue_script__ = __webpack_require__(187)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] app/components/news-cloudinary.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(188)
+	__vue_template__ = __webpack_require__(191)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -14245,7 +14245,7 @@
 	    },
 
 	    components: {
-	        inputCloudinaryMeta: __webpack_require__(189)
+	        inputCloudinaryMeta: __webpack_require__(188)
 	    }
 	};
 
@@ -14253,20 +14253,14 @@
 
 /***/ }),
 /* 188 */
-/***/ (function(module, exports) {
-
-	module.exports = "\n<div>\n    <div>\n        <input-cloudinary-meta :image.sync=\"post.data.style.image\" width=\"100%\" class=\"pk-max-height\"></input-cloudinary-meta>\n    </div>\n    <div v-if=\"post.style == 1\">\n        <div class=\"uk-form-row\">\n            <label class=\"uk-form-label\">{{'Youtube ID' | trans}}</label>\n            <div class=\"uk-form-controls\">\n                <input type=\"text\" class=\"uk-width-1-1\" v-model=\"post.data.style.video\">\n            </div>\n        </div>\n\n        <div class=\"uk-form-row\" v-if=\"post.data.style.video\">\n            <iframe width=\"100%\" height=\"auto\" :src=\"`https://www.youtube-nocookie.com/embed/${post.data.style.video}`\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n        </div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(190)
+	__vue_script__ = __webpack_require__(189)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] app/module/input-cloudinary-meta.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(191)
+	__vue_template__ = __webpack_require__(190)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -14291,7 +14285,7 @@
 	})()}
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14374,10 +14368,16 @@
 	});
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n\n<a class=\"uk-placeholder uk-text-center uk-display-block uk-margin-remove\" v-if=\"!image.src\" @click.prevent=\"pick\">\n    <img width=\"60\" height=\"60\" :alt=\"'Placeholder Image' | trans\" :src=\"$url('app/system/assets/images/placeholder-image.svg')\">\n\n    <p class=\"uk-text-muted uk-margin-small-top\">{{ 'Add Image' | trans }}</p>\n</a>\n\n<div class=\"uk-overlay uk-overlay-hover uk-visible-hover\" v-else>\n\n    <img :src=\"$url(image.src)\">\n\n    <div class=\"uk-overlay-panel uk-overlay-background uk-overlay-fade\"></div>\n\n    <a class=\"uk-position-cover\" @click.prevent=\"pick\"></a>\n\n    <div class=\"uk-panel-badge pk-panel-badge uk-hidden\">\n        <ul class=\"uk-subnav pk-subnav-icon\">\n            <li>\n                <a class=\"pk-icon-delete pk-icon-hover\" :title=\"'Delete' | trans\" data-uk-tooltip=\"{delay: 500}\" @click.prevent=\"remove\"></a>\n            </li>\n        </ul>\n    </div>\n\n</div>\n\n<v-modal v-ref:modal>\n    <form class=\"uk-form uk-form-stacked\" @submit.prevent=\"update\">\n\n        <div class=\"uk-modal-header\">\n            <h2>{{ 'Add cloudinary' | trans }}</h2>\n        </div>\n\n        <div class=\"uk-form-row\" v-show=\"img.id\">\n            <img :src=\"showImage(img.id)\" width=\"100%\" class=\"pk-height-max-height\">\n        </div>\n\n        <div class=\"uk-form-row\">\n            <label for=\"form-src\" class=\"uk-form-label\">{{ 'Image Id' | trans }}</label>\n            <div class=\"uk-form-controls\">\n                <input id=\"form-src\" class=\"uk-width-1-1\" type=\"text\" v-model=\"img.id\" lazy>\n            </div>\n        </div>\n\n        <div class=\"uk-form-row\">\n            <label for=\"form-alt\" class=\"uk-form-label\">{{ 'Alt' | trans }}</label>\n            <div class=\"uk-form-controls\">\n                <input id=\"form-alt\" class=\"uk-width-1-1\" type=\"text\" v-model=\"img.alt\">\n            </div>\n        </div>\n\n        <div class=\"uk-grid uk-grid-small uk-grid-width-1-4 uk-form-row\">\n            <div>\n                <div class=\"uk-form-row\">\n                    <label for=\"form-alt\" class=\"uk-form-label\">{{ 'Format' | trans }}</label>\n                    <div class=\"uk-form-controls\">\n                        <select class=\"uk-width-1-1\" v-model=\"img.cl.format\">\n                            <option value=\"webp\">Webp</option>\n                            <option value=\"jpg\">Jpg</option>\n                            <option value=\"png\">Png</option>\n                            <option value=\"gif\">Gif</option>\n                        </select>\n                    </div>\n                </div>\n            </div>\n            <div>\n                <div class=\"uk-form-row\">\n                    <label for=\"form-alt\" class=\"uk-form-label\">{{ 'Quality' | trans }}</label>\n                    <div class=\"uk-width-1-1 uk-form-controls\">\n                        <input class=\"uk-width-1-1\" type=\"text\" min=\"0\" max=\"99\" v-model=\"img.cl.quality\">\n                    </div>\n                </div>\n            </div>\n            <div>\n                <div class=\"uk-form-row\">\n                    <label for=\"form-alt\" class=\"uk-form-label\">{{ 'Width' | trans }}</label>\n                    <div class=\"uk-width-1-1 uk-form-controls\">\n                        <input class=\"uk-width-1-1\" type=\"text\" v-model=\"img.cl.width\">\n                    </div>\n                </div>\n            </div>\n            <div>\n                <div class=\"uk-form-row\">\n                    <label for=\"form-alt\" class=\"uk-form-label\">{{ 'Height' | trans }}</label>\n                    <div class=\"uk-width-1-1 uk-form-controls\">\n                        <input class=\"uk-width-1-1\" type=\"text\" v-model=\"img.cl.height\">\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"uk-form-row\" v-show=\"img.data.id\">\n            <pre><code>{{showImage(img.id , img.cl)}}</code></pre>\n        </div>\n\n        <div class=\"uk-modal-footer uk-text-right\">\n            <button class=\"uk-button uk-button-link uk-modal-close\" type=\"button\">{{ 'Cancel' | trans }}</button>\n            <button class=\"uk-button uk-button-link\" type=\"submit\">{{ 'Update' | trans }}</button>\n        </div>\n\n    </form>\n</v-modal>\n\n";
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n<div>\n    <div>\n        <input-cloudinary-meta :image.sync=\"post.data.style.image\" width=\"100%\" class=\"pk-max-height\"></input-cloudinary-meta>\n    </div>\n    <div v-if=\"post.style == 1\">\n        <div class=\"uk-form-row\">\n            <label class=\"uk-form-label\">{{'Youtube ID' | trans}}</label>\n            <div class=\"uk-form-controls\">\n                <input type=\"text\" class=\"uk-width-1-1\" v-model=\"post.data.style.video\">\n            </div>\n        </div>\n\n        <div class=\"uk-form-row\" v-if=\"post.data.style.video\">\n            <iframe width=\"100%\" height=\"auto\" :src=\"`https://www.youtube-nocookie.com/embed/${post.data.style.video}`\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n        </div>\n    </div>\n</div>\n";
 
 /***/ })
 /******/ ]);
