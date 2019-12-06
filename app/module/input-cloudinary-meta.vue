@@ -31,6 +31,10 @@
                 <h2>{{ 'Add cloudinary' | trans }}</h2>
             </div>
 
+            <div class="cms-container">
+
+            </div>
+
             <div class="uk-form-row" v-show="img.id">
                 <img :src="showImage(img.id)" width="100%" class="pk-height-max-height">
             </div>
@@ -150,20 +154,17 @@
                     this.img.alt = first + alt.substr(1);
                 }
             });
+
         },
 
         methods: {
 
             pick: function () {
-                //this.img.src = this.image.src;
-                //this.img.alt = this.image.alt;
                 this.img = this.image;
                 this.$refs.modal.open();
             },
 
             update: function () {
-                //this.image.src = this.img.src;
-                //this.image.alt = this.img.alt;
                 this.img.src = this.showImage(this.img.id , this.img.cl);
                 this.image = this.img;
                 this.$refs.modal.close();

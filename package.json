@@ -2,7 +2,9 @@
     "name": "cloudinary",
     "scripts": {
         "webpack": "webpack --watch --mode=production",
-        "compile": "gulp"
+        "compile": "gulp",
+        "archive":"rm -rf *.zip && webpack && composer archive --format=zip",
+        "push":"yarn archive && git add . && git commit -m 'Work Station' && git push -u origin"
     },
     "devDependencies": {
         "babel-core": "^6.1.2",

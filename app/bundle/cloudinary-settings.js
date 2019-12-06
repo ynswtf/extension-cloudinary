@@ -66,7 +66,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-9c7573ea/cloudinary-settings.vue"
+	  var id = "_v-a6d8b484/cloudinary-settings.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
